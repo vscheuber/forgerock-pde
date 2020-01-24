@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+
+  am:
+    image: am:latest
+    container_name: am
+    stdin_open: true
+    tty: true
+    build: 
+      context: am
+      args:
+        - AM_HOST=${AM_HOST}
+        - AM_PASSWORD=${AM_PASSWORD}
+    environment: 
+      - AM_HOST=${AM_HOST}
+      - AM_PASSWORD=${AM_PASSWORD}
+    ports:
+      # - "8080:8080"
+      - "443:8443"
+      - "50389:50389"
+    hostname: am
+    domainname: mytestrun.com
+    networks:
+      - forgenet
+    volumes:
+      - "./am/build/amster/am-snapshot:/opt/forgerock/am/snapshot"
+      # - "./am/volumes/am-config:/root/am"
+
+  idm:
+    image: idm:latest
+    container_name: idm
+    stdin_open: true
+    tty: true
+    build: 
+      context: idm
+      args:
+        - IDM_HOST=${IDM_HOST}
+        - IDM_PASSWORD=${IDM_PASSWORD}
+        - PROJECT_HOME={PROJECT_HOME}
+    environment: 
+      - IDM_HOST=${IDM_HOST}
+      - IDM_PASSWORD=${IDM_PASSWORD}
+      - PROJECT_HOME=${PROJECT_HOME}
+    ports:
+      - "8080:8080"
+      - "50390:50389"
+    hostname: idm
+    domainname: mytestrun.com
+    networks:
+      - forgenet
+    volumes:
+      - "./idm/build/idm-config:/opt/idm-config"
+      # - "./am/volumes/am-config:/root/am"
+
+networks:
+  forgenet:
