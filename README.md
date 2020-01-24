@@ -1,5 +1,7 @@
 ## ForgeRock Personal Development Environment
 
+This project is for everyone who needs to run an instance of the ForgeRock Identity Platform with a small footprint and easy setup. Ideal audiences are developers or people who just want to get to know the ForgeRock Identity Platform but don't want to concern themselves with Kubernetes or traditional installs. The project is setup to support configuration and identity data snapshotting.
+
 ### Prerequisites
 
 * [ForgeRock BackStage account](https://backstage.forgerock.com)
@@ -18,15 +20,10 @@ training directory:
 Download the AM and IEC resources,
 
 * to `am/build/resources`
-  * [Access Management 6.5.2.2](https://backstage.forgerock.com/downloads/get/familyId:am/productId:am/minorVersion:6.5/version:6.5.2.2/releaseType:full/distribution:eval-war)
-  * [Amster 6.5.2.2](https://backstage.forgerock.com/downloads/get/familyId:am/productId:amster/minorVersion:6.5/version:6.5.2.2/releaseType:full/distribution:zip)
+  * [Access Management 6.5.2.2](https://backstage.forgerock.com/downloads/get/familyId:am/productId:am/minorVersion:6.5/version:6.5.2.2/releaseType:full/distribution:eval-war) and rename to `am.war`.
+  * [Amster 6.5.2.2](https://backstage.forgerock.com/downloads/get/familyId:am/productId:amster/minorVersion:6.5/version:6.5.2.2/releaseType:full/distribution:zip) and rename to `amster.zip`.
 * to `idm/build/resources`
-  * [Identity Manager 6.5.0.2](https://backstage.forgerock.com/downloads/get/familyId:idm/productId:idm/minorVersion:6.5/version:6.5.0.2/releaseType:full/distribution:eval-zip)
-
-Rename the files to:
-* am.war
-* amster.zip
-* idm.zip
+  * [Identity Manager 6.5.0.2](https://backstage.forgerock.com/downloads/get/familyId:idm/productId:idm/minorVersion:6.5/version:6.5.0.2/releaseType:full/distribution:eval-zip) and rename to `idm.zip`.
 
 Run the script `init.sh`. This script performs various preparatory actions with the product binaries, e.g. adds additional authentication nodes and other customizations to the am.war file.
 
