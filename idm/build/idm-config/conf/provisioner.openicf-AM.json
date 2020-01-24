@@ -9,21 +9,7 @@
         "port" : "50389",
         "ssl" : false,
         "principal" : "cn=Directory Manager",
-        "credentials" : {
-            "$crypto" : {
-                "type" : "x-simple-encryption",
-                "value" : {
-                    "cipher" : "AES/CBC/PKCS5Padding",
-                    "stableId" : "openidm-sym-default",
-                    "salt" : "PtUAXc2JKLBiKLAMckwIjQ==",
-                    "data" : "xzSpX3fHvkLsQ5IDMrZWqw==",
-                    "keySize" : 16,
-                    "purpose" : "idm.config.encryption",
-                    "iv" : "2DiB+8SEzT6oWtksQeAPww==",
-                    "mac" : "Kf7mE9a2mOHt1XSGZBJKOQ=="
-                }
-            }
-        },
+        "credentials" : "F0rgeR0ck2020",
         "baseContexts" : [
             "ou=people,dc=openam,dc=forgerock,dc=org"
         ],
