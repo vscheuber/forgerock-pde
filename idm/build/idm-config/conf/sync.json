@@ -1,0 +1,295 @@
+{
+    "mappings" : [
+        {
+            "name" : "systemAMAccounts_managedUser",
+            "source" : "system/AM/account",
+            "target" : "managed/user",
+            "correlationQuery" : {
+                "type" : "text/javascript",
+                "expressionTree" : {
+                    "any" : [
+                        "mail"
+                    ]
+                },
+                "mapping" : "systemAMAccounts_managedUser",
+                "file" : "ui/correlateTreeToQueryFilter.js"
+            },
+            "properties" : [
+                {
+                    "source" : "cn",
+                    "target" : "displayName"
+                },
+                {
+                    "source" : "description",
+                    "target" : "description"
+                },
+                {
+                    "source" : "givenName",
+                    "target" : "givenName"
+                },
+                {
+                    "source" : "mail",
+                    "target" : "mail"
+                },
+                {
+                    "source" : "telephoneNumber",
+                    "target" : "telephoneNumber",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "object.telephoneNumber != null"
+                    }
+                },
+                {
+                    "source" : "sn",
+                    "target" : "sn"
+                },
+                {
+                    "source" : "uid",
+                    "target" : "userName"
+                },
+                {
+                    "source" : "kbaInfo",
+                    "target" : "kbaInfo",
+                    "transform" : {
+                        "type" : "groovy",
+                        "source" : "source ? source.collect{(new groovy.json.JsonSlurper()).parseText(it)} : []"
+                    }
+                },
+                {
+                    "target" : "type",
+                    "source" : "employeeType",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "object.employeeType != null"
+                    }
+                }
+            ],
+            "policies" : [
+                {
+                    "situation" : "CONFIRMED",
+                    "action" : "UPDATE"
+                },
+                {
+                    "situation" : "FOUND",
+                    "action" : "UPDATE"
+                },
+                {
+                    "situation" : "ABSENT",
+                    "action" : "CREATE"
+                },
+                {
+                    "situation" : "AMBIGUOUS",
+                    "action" : "EXCEPTION"
+                },
+                {
+                    "situation" : "MISSING",
+                    "action" : "CREATE"
+                },
+                {
+                    "situation" : "SOURCE_MISSING",
+                    "action" : "DELETE"
+                },
+                {
+                    "situation" : "UNQUALIFIED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "UNASSIGNED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "FOUND_ALREADY_LINKED",
+                    "action" : "ASYNC"
+                },
+                {
+                    "situation" : "LINK_ONLY",
+                    "action" : "ASYNC"
+                },
+                {
+                    "situation" : "TARGET_IGNORED",
+                    "action" : "ASYNC"
+                },
+                {
+                    "situation" : "SOURCE_IGNORED",
+                    "action" : "ASYNC"
+                },
+                {
+                    "situation" : "ALL_GONE",
+                    "action" : "ASYNC"
+                }
+            ]
+        },
+        {
+            "name" : "managedUser_systemAMAccounts",
+            "source" : "managed/user",
+            "target" : "system/AM/account",
+            "links" : "systemAMAccounts_managedUser",
+            "onCreate" : {
+                "type" : "groovy",
+                "globals" : { },
+                "source" : "target.dn = 'uid=' + source.userName + ',ou=people,dc=openam,dc=forgerock,dc=org';"
+            },
+            "properties" : [
+                {
+                    "source" : "givenName",
+                    "target" : "givenName"
+                },
+                {
+                    "source" : "sn",
+                    "target" : "sn"
+                },
+                {
+                    "source" : "",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "source" : "source.displayName || (source.givenName + ' ' + source.sn);"
+                    },
+                    "target" : "cn"
+                },
+                {
+                    "source" : "userName",
+                    "target" : "uid"
+                },
+                {
+                    "source" : "description",
+                    "target" : "description",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "!!object.description"
+                    }
+                },
+                {
+                    "source" : "mail",
+                    "target" : "mail"
+                },
+                {
+                    "source" : "password",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "object.password != null"
+                    },
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "source" : "openidm.decrypt(source);"
+                    },
+                    "target" : "userPassword"
+                },
+                {
+                    "source" : "telephoneNumber",
+                    "target" : "telephoneNumber",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "source" : "!!object.telephoneNumber"
+                    }
+                },
+                {
+                    "target" : "aliasList",
+                    "condition" : "/object/idpData pr",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "Object\n .keys(source)\n .filter(function (provider) { return source[provider].enabled !== false; })\n .map(function (provider) { return provider + '-' + source[provider].subject; })"
+                    },
+                    "source" : "idpData"
+                },
+                {
+                    "target" : "objectClass",
+                    "default" : [
+                        "top",
+                        "inetuser",
+                        "person",
+                        "inetOrgPerson",
+                        "organizationalPerson",
+                        "iplanet-am-user-service",
+                        "kbaInfoContainer",
+                        "devicePrintProfilesContainer",
+                        "pushDeviceProfilesContainer",
+                        "sunFMSAML2NameIdentifier",
+                        "sunAMAuthAccountLockout",
+                        "iplanet-am-auth-configuration-service",
+                        "iplanet-am-managed-person",
+                        "iPlanetPreferences",
+                        "oathDeviceProfilesContainer",
+                        "sunFederationManagerDataStore",
+                        "sunIdentityServerLibertyPPService",
+                        "webauthnDeviceProfilesContainer",
+                        "forgerock-am-dashboard-service"
+                    ]
+                },
+                {
+                    "source" : "accountStatus",
+                    "target" : "inetuserstatus",
+                    "transform" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "source === 'active' ? 'Active' : 'Inactive';"
+                    }
+                },
+                {
+                    "target" : "employeeType",
+                    "source" : "type",
+                    "condition" : {
+                        "type" : "text/javascript",
+                        "globals" : { },
+                        "source" : "!!object.type"
+                    }
+                }
+            ],
+            "policies" : [
+                {
+                    "situation" : "CONFIRMED",
+                    "action" : "UPDATE"
+                },
+                {
+                    "situation" : "FOUND",
+                    "action" : "LINK"
+                },
+                {
+                    "situation" : "ABSENT",
+                    "action" : "CREATE"
+                },
+                {
+                    "situation" : "AMBIGUOUS",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "MISSING",
+                    "action" : "CREATE"
+                },
+                {
+                    "situation" : "SOURCE_MISSING",
+                    "action" : "DELETE"
+                },
+                {
+                    "situation" : "UNQUALIFIED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "UNASSIGNED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "TARGET_IGNORED",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "ALL_GONE",
+                    "action" : "IGNORE"
+                },
+                {
+                    "situation" : "FOUND_ALREADY_LINKED",
+                    "action" : "EXCEPTION"
+                },
+                {
+                    "situation" : "LINK_ONLY",
+                    "action" : "EXCEPTION"
+                },
+                {
+                    "situation" : "SOURCE_IGNORED",
+                    "action" : "IGNORE"
+                }
+            ]
+        }
+    ]
+}
