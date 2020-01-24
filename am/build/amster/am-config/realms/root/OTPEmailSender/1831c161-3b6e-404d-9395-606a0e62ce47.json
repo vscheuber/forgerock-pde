@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "OTPEmailSender",
+    "entityId" : "1831c161-3b6e-404d-9395-606a0e62ce47",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "1831c161-3b6e-404d-9395-606a0e62ce47",
+    "hostName" : "mail.example.com",
+    "password" : null,
+    "sslOption" : "SSL",
+    "hostPort" : 25,
+    "emailAttribute" : "mail",
+    "smsGatewayImplementationClass" : "com.sun.identity.authentication.modules.hotp.DefaultSMSGatewayImpl",
+    "fromEmailAddress" : "admin@example.com",
+    "username" : "admin@example.com",
+    "_type" : {
+      "_id" : "OneTimePasswordSmtpSenderNode",
+      "name" : "OTP Email Sender",
+      "collection" : true
+    }
+  }
+}

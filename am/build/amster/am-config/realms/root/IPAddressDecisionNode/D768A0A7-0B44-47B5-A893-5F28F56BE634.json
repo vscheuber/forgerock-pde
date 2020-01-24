@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "IPAddressDecisionNode",
+    "entityId" : "D768A0A7-0B44-47B5-A893-5F28F56BE634",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "D768A0A7-0B44-47B5-A893-5F28F56BE634",
+    "blacklist" : false,
+    "ipList" : {
+      "10.10.10.0" : "/24",
+      "192.168.7.0" : "/24"
+    },
+    "_type" : {
+      "_id" : "IPAddressDecisionNode",
+      "name" : "IP Address Decision Node",
+      "collection" : true
+    }
+  }
+}

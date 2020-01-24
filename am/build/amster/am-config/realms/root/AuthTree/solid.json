@@ -1,0 +1,47 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "solid",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "solid",
+    "nodes" : {
+      "216B9F7F-5CA0-417B-A5BB-FD095B747735" : {
+        "displayName" : "Simple",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "22F2921B-5DDD-4720-8E44-4F92D9C53353"
+        }
+      },
+      "22F2921B-5DDD-4720-8E44-4F92D9C53353" : {
+        "displayName" : "Pwd Compromised?",
+        "nodeType" : "HaveIBeenPwnedPasswordNode",
+        "connections" : {
+          "false" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "true" : "77DC119E-66C0-4F5B-A252-9C90A47D3962"
+        }
+      },
+      "77DC119E-66C0-4F5B-A252-9C90A47D3962" : {
+        "displayName" : "Pwd Compromised",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "Abort" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "Continue" : "BE5E8387-6989-4121-91BB-6988FAE0E9D1"
+        }
+      },
+      "BE5E8387-6989-4121-91BB-6988FAE0E9D1" : {
+        "displayName" : "Inner Tree Evaluator",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "216B9F7F-5CA0-417B-A5BB-FD095B747735"
+  }
+}

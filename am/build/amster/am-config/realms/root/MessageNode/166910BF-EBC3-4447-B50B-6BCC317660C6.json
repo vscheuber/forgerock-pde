@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "MessageNode",
+    "entityId" : "166910BF-EBC3-4447-B50B-6BCC317660C6",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "166910BF-EBC3-4447-B50B-6BCC317660C6",
+    "messageYes" : {
+      "en" : "Continue"
+    },
+    "messageNo" : {
+      "en" : "Abort"
+    },
+    "message" : {
+      "en" : "You are inside the FW!"
+    },
+    "_type" : {
+      "_id" : "MessageNode",
+      "name" : "Message Node",
+      "collection" : true
+    }
+  }
+}

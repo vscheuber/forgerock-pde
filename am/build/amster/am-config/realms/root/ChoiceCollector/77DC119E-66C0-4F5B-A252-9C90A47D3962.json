@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "ChoiceCollector",
+    "entityId" : "77DC119E-66C0-4F5B-A252-9C90A47D3962",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "77DC119E-66C0-4F5B-A252-9C90A47D3962",
+    "defaultChoice" : "Continue",
+    "choices" : [ "Abort", "Continue" ],
+    "prompt" : "Your pwd has been compromised! Please change it immediately. To continue provide 2nd factor.",
+    "_type" : {
+      "_id" : "ChoiceCollectorNode",
+      "name" : "Choice Collector",
+      "collection" : true
+    }
+  }
+}

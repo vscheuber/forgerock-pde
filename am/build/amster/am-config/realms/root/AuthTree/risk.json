@@ -1,0 +1,72 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "risk",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "risk",
+    "nodes" : {
+      "41DCD30C-8452-4897-B090-591D56FA4A76" : {
+        "displayName" : "Check Geolocation",
+        "nodeType" : "GeoLocationNode",
+        "connections" : {
+          "HIGH" : "7D39B671-6EC3-462F-9DDC-CE443A9E3766",
+          "UNKNOWN" : "7D39B671-6EC3-462F-9DDC-CE443A9E3766",
+          "NONE" : "529D3BD0-F2E8-4653-A4A6-ACA1FF5E06A6",
+          "LOW" : "529D3BD0-F2E8-4653-A4A6-ACA1FF5E06A6",
+          "MODERATE" : "C9660B08-1B4E-4F89-9A40-0120CF2CDA57"
+        }
+      },
+      "529D3BD0-F2E8-4653-A4A6-ACA1FF5E06A6" : {
+        "displayName" : "Track GeoLocation",
+        "nodeType" : "GeoLocationNode",
+        "connections" : {
+          "NONE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "LOW" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "MODERATE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "HIGH" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "UNKNOWN" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "73A59508-CDA9-455E-B280-E2A8E1F22ABD" : {
+        "displayName" : "Simple",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "41DCD30C-8452-4897-B090-591D56FA4A76",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "7D39B671-6EC3-462F-9DDC-CE443A9E3766" : {
+        "displayName" : "Disallow",
+        "nodeType" : "MessageNode",
+        "connections" : {
+          "true" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "false" : "68E2F438-0A18-44E7-ADBA-7A34008C777B"
+        }
+      },
+      "C9660B08-1B4E-4F89-9A40-0120CF2CDA57" : {
+        "displayName" : "MFA - Push",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "529D3BD0-F2E8-4653-A4A6-ACA1FF5E06A6",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "68E2F438-0A18-44E7-ADBA-7A34008C777B" : {
+        "displayName" : "Track GeoLocation",
+        "nodeType" : "GeoLocationNode",
+        "connections" : {
+          "NONE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "LOW" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "MODERATE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "HIGH" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "UNKNOWN" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "73A59508-CDA9-455E-B280-E2A8E1F22ABD"
+  }
+}

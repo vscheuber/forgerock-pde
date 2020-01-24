@@ -1,0 +1,53 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "simple",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "simple",
+    "nodes" : {
+      "8375C7F2-EF98-4C08-A096-E5D6154E26D0" : {
+        "displayName" : "Validate Creds",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "2DF41E34-D824-4ADE-BBBD-D84C7E9A307F"
+        }
+      },
+      "7CCDC1E0-8696-4EA1-96E9-FF8D1C618AD2" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "81EA9402-FC9A-47A0-AF84-352456F72A31",
+          "unknown" : "D3D0B91E-D9A8-47EF-A177-1B497F2DF1E0"
+        }
+      },
+      "2DF41E34-D824-4ADE-BBBD-D84C7E9A307F" : {
+        "displayName" : "Preserve State",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "81EA9402-FC9A-47A0-AF84-352456F72A31" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "8375C7F2-EF98-4C08-A096-E5D6154E26D0"
+        }
+      },
+      "D3D0B91E-D9A8-47EF-A177-1B497F2DF1E0" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "8375C7F2-EF98-4C08-A096-E5D6154E26D0"
+        }
+      }
+    },
+    "entryNodeId" : "7CCDC1E0-8696-4EA1-96E9-FF8D1C618AD2"
+  }
+}

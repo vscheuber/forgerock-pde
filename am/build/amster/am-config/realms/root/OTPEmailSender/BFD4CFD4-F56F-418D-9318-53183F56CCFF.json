@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "OTPEmailSender",
+    "entityId" : "BFD4CFD4-F56F-418D-9318-53183F56CCFF",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "BFD4CFD4-F56F-418D-9318-53183F56CCFF",
+    "hostName" : "smtp.gmail.com",
+    "sslOption" : "SSL",
+    "hostPort" : 465,
+    "emailAttribute" : "mail",
+    "smsGatewayImplementationClass" : "com.sun.identity.authentication.modules.hotp.DefaultSMSGatewayImpl",
+    "fromEmailAddress" : "vscheuber@gmail.com",
+    "username" : "vscheuber@gmail.com",
+    "_type" : {
+      "_id" : "OneTimePasswordSmtpSenderNode",
+      "name" : "OTP Email Sender",
+      "collection" : true
+    }
+  }
+}

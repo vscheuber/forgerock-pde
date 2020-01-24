@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PersistentCookieDecision",
+    "entityId" : "d88e9f6c-edf3-4fb3-a71a-41a548b1176f",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "d88e9f6c-edf3-4fb3-a71a-41a548b1176f",
+    "useHttpOnlyCookie" : true,
+    "enforceClientIp" : false,
+    "hmacSigningKey" : null,
+    "idleTimeout" : 5,
+    "useSecureCookie" : false,
+    "persistentCookieName" : "session-jwt",
+    "_type" : {
+      "_id" : "PersistentCookieDecisionNode",
+      "name" : "Persistent Cookie Decision",
+      "collection" : true
+    }
+  }
+}

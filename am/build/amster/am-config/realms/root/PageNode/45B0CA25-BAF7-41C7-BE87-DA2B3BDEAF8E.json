@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PageNode",
+    "entityId" : "45B0CA25-BAF7-41C7-BE87-DA2B3BDEAF8E",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "45B0CA25-BAF7-41C7-BE87-DA2B3BDEAF8E",
+    "nodes" : [ {
+      "_id" : "CE4462B6-3D6D-4FAE-B7B2-90F26002AC5D",
+      "nodeType" : "UsernameCollectorNode",
+      "displayName" : "Username"
+    }, {
+      "_id" : "E821547F-3B1E-43D7-BF6E-8D72D8944BDA",
+      "nodeType" : "PasswordCollectorNode",
+      "displayName" : "Password"
+    } ],
+    "_type" : {
+      "_id" : "PageNode",
+      "name" : "Page Node",
+      "collection" : true
+    }
+  }
+}

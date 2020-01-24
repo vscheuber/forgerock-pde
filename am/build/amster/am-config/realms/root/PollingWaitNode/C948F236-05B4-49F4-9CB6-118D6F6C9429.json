@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PollingWaitNode",
+    "entityId" : "C948F236-05B4-49F4-9CB6-118D6F6C9429",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "C948F236-05B4-49F4-9CB6-118D6F6C9429",
+    "spamDetectionTolerance" : 3,
+    "spamDetectionEnabled" : true,
+    "exitMessage" : {
+      "en" : "Exit"
+    },
+    "waitingMessage" : { },
+    "secondsToWait" : 3,
+    "exitable" : true,
+    "_type" : {
+      "_id" : "PollingWaitNode",
+      "name" : "Polling Wait Node",
+      "collection" : true
+    }
+  }
+}

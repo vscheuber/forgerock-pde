@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "CreatePassword",
+    "entityId" : "d8314105-a5f3-4acf-a242-b993a79748a3",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "d8314105-a5f3-4acf-a242-b993a79748a3",
+    "minPasswordLength" : 0,
+    "_type" : {
+      "_id" : "CreatePasswordNode",
+      "name" : "Create Password",
+      "collection" : true
+    }
+  }
+}

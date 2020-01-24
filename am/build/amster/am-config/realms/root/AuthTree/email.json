@@ -1,0 +1,60 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "email",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "email",
+    "nodes" : {
+      "B9D162CB-404C-467D-A3EA-098BF634E36F" : {
+        "displayName" : "Generate OTP",
+        "nodeType" : "OneTimePasswordGeneratorNode",
+        "connections" : {
+          "outcome" : "BFD4CFD4-F56F-418D-9318-53183F56CCFF"
+        }
+      },
+      "BFD4CFD4-F56F-418D-9318-53183F56CCFF" : {
+        "displayName" : "Email OTP",
+        "nodeType" : "OneTimePasswordSmtpSenderNode",
+        "connections" : {
+          "outcome" : "1857F0E0-D873-4AD1-A599-88E32E00F230"
+        }
+      },
+      "1857F0E0-D873-4AD1-A599-88E32E00F230" : {
+        "displayName" : "Validate OTP",
+        "nodeType" : "OneTimePasswordCollectorDecisionNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "54E5219A-F99C-431F-B287-6AAE660B630F"
+        }
+      },
+      "54E5219A-F99C-431F-B287-6AAE660B630F" : {
+        "displayName" : "Resend OTP?",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "Yes" : "B9D162CB-404C-467D-A3EA-098BF634E36F",
+          "No" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "FCFD8B7F-CFEA-44EB-B0AF-C9BAAECA5D18" : {
+        "displayName" : "Check Username",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "B9D162CB-404C-467D-A3EA-098BF634E36F",
+          "unknown" : "77C44707-1880-4F25-AC5C-A67C5676D10E"
+        }
+      },
+      "77C44707-1880-4F25-AC5C-A67C5676D10E" : {
+        "displayName" : "Username",
+        "nodeType" : "UsernameCollectorNode",
+        "connections" : {
+          "outcome" : "FCFD8B7F-CFEA-44EB-B0AF-C9BAAECA5D18"
+        }
+      }
+    },
+    "entryNodeId" : "FCFD8B7F-CFEA-44EB-B0AF-C9BAAECA5D18"
+  }
+}

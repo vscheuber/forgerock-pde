@@ -1,0 +1,53 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "google",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "google",
+    "nodes" : {
+      "C82E61DD-591A-408C-920D-0767DC664454" : {
+        "displayName" : "Social Google",
+        "nodeType" : "SocialGoogleNode",
+        "connections" : {
+          "ACCOUNT_EXISTS" : "56F7D43B-D457-488C-AA32-068B2E7314C3",
+          "NO_ACCOUNT" : "BDA1B0BA-4D81-40B8-95DD-8AFAEF5BC7C5"
+        }
+      },
+      "56F7D43B-D457-488C-AA32-068B2E7314C3" : {
+        "displayName" : "Debug Node",
+        "nodeType" : "DebugNode",
+        "connections" : {
+          "outcome" : "6A642687-84F4-48EF-9BA3-54C04FBFDAC7"
+        }
+      },
+      "BDA1B0BA-4D81-40B8-95DD-8AFAEF5BC7C5" : {
+        "displayName" : "Debug Node",
+        "nodeType" : "DebugNode",
+        "connections" : {
+          "outcome" : "6D9131AD-0319-4B8C-9A09-9DC013632E95"
+        }
+      },
+      "6A642687-84F4-48EF-9BA3-54C04FBFDAC7" : {
+        "displayName" : "Account Exists!",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "OK" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "Cancel" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "6D9131AD-0319-4B8C-9A09-9DC013632E95" : {
+        "displayName" : "No Account Exists",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "OK" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "Cancel" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "C82E61DD-591A-408C-920D-0767DC664454"
+  }
+}

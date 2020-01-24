@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PushNotification",
+    "entityId" : "PushNotification",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "",
+    "defaults" : {
+      "delegateFactory" : "org.forgerock.openam.services.push.sns.SnsHttpDelegateFactory",
+      "mdDuration" : 120,
+      "accessKey" : "AKIAVMMPFBOEFKICARAN",
+      "appleEndpoint" : "arn:aws:sns:us-east-1:370204281736:app/APNS/z5WMfoHHSrqjVAE_9bWBqw",
+      "mdConcurrency" : 16,
+      "secret" : "5PEvspokvKzYfLLGpHxTmKJxKkrxPTBEJIPGNkP1",
+      "region" : "us-east-1",
+      "googleEndpoint" : "arn:aws:sns:us-east-1:370204281736:app/GCM/z5WMfoHHSrqjVAE_9bWBqw",
+      "mdCacheSize" : 10000
+    },
+    "_type" : {
+      "_id" : "pushNotification",
+      "name" : "Push Notification Service",
+      "collection" : false
+    }
+  }
+}

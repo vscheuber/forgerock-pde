@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PageNode",
+    "entityId" : "5967A1E4-1E1B-4DC4-A730-8B1AD698007F",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "5967A1E4-1E1B-4DC4-A730-8B1AD698007F",
+    "nodes" : [ {
+      "_id" : "26AD2281-359B-4F46-BED5-F60DAD4055AF",
+      "nodeType" : "UsernameCollectorNode",
+      "displayName" : "Username"
+    } ],
+    "_type" : {
+      "_id" : "PageNode",
+      "name" : "Page Node",
+      "collection" : true
+    }
+  }
+}

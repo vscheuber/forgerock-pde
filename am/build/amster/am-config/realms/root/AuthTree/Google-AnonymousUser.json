@@ -1,0 +1,37 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "Google-AnonymousUser",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "Google-AnonymousUser",
+    "nodes" : {
+      "eade2db5-ce71-4a1e-82e5-1de866736e00" : {
+        "displayName" : "Map to Anonymous User",
+        "nodeType" : "AnonymousUserNode",
+        "connections" : {
+          "outcome" : "c254bb18-ddab-4e16-808d-8486ff038dfe"
+        }
+      },
+      "c254bb18-ddab-4e16-808d-8486ff038dfe" : {
+        "displayName" : "Set Success URL",
+        "nodeType" : "SetSuccessUrlNode",
+        "connections" : {
+          "outcome" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "bed61784-a1fa-4cae-9ca7-cd181c83b162" : {
+        "displayName" : "Google Social Authentication",
+        "nodeType" : "SocialGoogleNode",
+        "connections" : {
+          "NO_ACCOUNT" : "eade2db5-ce71-4a1e-82e5-1de866736e00",
+          "ACCOUNT_EXISTS" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      }
+    },
+    "entryNodeId" : "bed61784-a1fa-4cae-9ca7-cd181c83b162"
+  }
+}

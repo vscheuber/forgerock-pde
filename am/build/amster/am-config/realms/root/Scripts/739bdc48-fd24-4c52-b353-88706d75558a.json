@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "Scripts",
+    "entityId" : "739bdc48-fd24-4c52-b353-88706d75558a",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "739bdc48-fd24-4c52-b353-88706d75558a",
+    "name" : "Check Username",
+    "description" : "Check if username is known.",
+    "script" : "LyoKICBDaGVjayBpZiB1c2VybmFtZSBoYXMgYWxyZWFkeSBiZWVuIGNvbGxlY3RlZC4gCiAgUmV0dXJuICJrbm93biIgaWYgeWVzLCAidW5rbm93biIgb3RoZXJ3aXNlLgogKi8KCmlmIChudWxsICE9IHNoYXJlZFN0YXRlLmdldCgidXNlcm5hbWUiKSkgewoJb3V0Y29tZSA9ICJrbm93biI7Cn0KZWxzZSB7CiAJb3V0Y29tZSA9ICJ1bmtub3duIjsKfQ==",
+    "default" : false,
+    "language" : "JAVASCRIPT",
+    "context" : "AUTHENTICATION_TREE_DECISION_NODE",
+    "createdBy" : "null",
+    "creationDate" : 0,
+    "lastModifiedBy" : "null",
+    "lastModifiedDate" : 0
+  }
+}

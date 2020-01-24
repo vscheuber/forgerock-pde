@@ -1,0 +1,42 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "SocialGoogle",
+    "entityId" : "C82E61DD-591A-408C-920D-0767DC664454",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "C82E61DD-591A-408C-920D-0767DC664454",
+    "redirectURI" : "https://trimble.mytestrun.com/openam",
+    "authenticationIdKey" : "sub",
+    "clientId" : "297338177925-mho17cgnm540s2gre8h27feb6sbs1msd.apps.googleusercontent.com",
+    "basicAuth" : true,
+    "cfgAccountProviderClass" : "org.forgerock.openam.authentication.modules.common.mapping.DefaultAccountProvider",
+    "scopeString" : "profile email",
+    "cfgAccountMapperConfiguration" : {
+      "sub" : "iplanet-am-user-alias-list"
+    },
+    "cfgAttributeMappingClasses" : [ "org.forgerock.openam.authentication.modules.common.mapping.JsonAttributeMapper|iplanet-am-user-alias-list|google-" ],
+    "issuer" : "",
+    "tokenEndpoint" : "https://www.googleapis.com/oauth2/v4/token",
+    "cfgAttributeMappingConfiguration" : {
+      "sub" : "iplanet-am-user-alias-list",
+      "name" : "cn",
+      "given_name" : "givenName",
+      "family_name" : "sn",
+      "email" : "mail"
+    },
+    "provider" : "google",
+    "cfgMixUpMitigation" : false,
+    "authorizeEndpoint" : "https://accounts.google.com/o/oauth2/v2/auth",
+    "cfgAccountMapperClass" : "org.forgerock.openam.authentication.modules.common.mapping.JsonAttributeMapper|*|google-",
+    "userInfoEndpoint" : "https://www.googleapis.com/oauth2/v3/userinfo",
+    "saveUserAttributesToSession" : true,
+    "_type" : {
+      "_id" : "SocialGoogleNode",
+      "name" : "Social Google",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "WebAuthnRegistrationNode",
+    "entityId" : "0D43AD7F-90B7-4C28-9E20-20AAF6100920",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "0D43AD7F-90B7-4C28-9E20-20AAF6100920",
+    "relyingPartyName" : "ForgeRock",
+    "generateRecoveryCodes" : true,
+    "authenticatorAttachment" : "UNSPECIFIED",
+    "acceptedSigningAlgorithms" : [ "ES256", "RS256" ],
+    "attestationPreference" : "NONE",
+    "userVerificationRequirement" : "PREFERRED",
+    "excludeCredentials" : false,
+    "timeout" : 60,
+    "_type" : {
+      "_id" : "WebAuthnRegistrationNode",
+      "name" : "WebAuthn Registration Node",
+      "collection" : true
+    }
+  }
+}

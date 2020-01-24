@@ -1,0 +1,19 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "ScriptedDecision",
+    "entityId" : "0E84AB36-0CEF-49EB-AB5F-99B2CE750984",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "0E84AB36-0CEF-49EB-AB5F-99B2CE750984",
+    "outcomes" : [ "known", "unknown" ],
+    "script" : "739bdc48-fd24-4c52-b353-88706d75558a",
+    "_type" : {
+      "_id" : "ScriptedDecisionNode",
+      "name" : "Scripted Decision",
+      "collection" : true
+    }
+  }
+}

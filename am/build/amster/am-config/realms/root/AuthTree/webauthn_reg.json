@@ -1,0 +1,62 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "webauthn_reg",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "webauthn_reg",
+    "nodes" : {
+      "BF9625D4-5B54-476B-8388-A80533BDF458" : {
+        "displayName" : "Register",
+        "nodeType" : "WebAuthnRegistrationNode",
+        "connections" : {
+          "unsupported" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "success" : "4E9333D3-90F8-4F39-956B-2F435D88F943",
+          "failure" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "4E9333D3-90F8-4F39-956B-2F435D88F943" : {
+        "displayName" : "Show Recovery Codes",
+        "nodeType" : "RecoveryCodeDisplayNode",
+        "connections" : {
+          "outcome" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "C957411F-7E66-4CF0-A9D1-6C0C8425667D" : {
+        "displayName" : "Validate Creds",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "BF9625D4-5B54-476B-8388-A80533BDF458"
+        }
+      },
+      "81056966-2426-4B91-8CDC-B16683683A8D" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "9B92CF9F-BF97-494E-8DF5-BD27F062D5BC",
+          "unknown" : "4F46DE9E-9A41-45AD-9705-460E66CDB3C0"
+        }
+      },
+      "4F46DE9E-9A41-45AD-9705-460E66CDB3C0" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "C957411F-7E66-4CF0-A9D1-6C0C8425667D"
+        }
+      },
+      "9B92CF9F-BF97-494E-8DF5-BD27F062D5BC" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "C957411F-7E66-4CF0-A9D1-6C0C8425667D"
+        }
+      }
+    },
+    "entryNodeId" : "81056966-2426-4B91-8CDC-B16683683A8D"
+  }
+}

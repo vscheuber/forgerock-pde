@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "trusona",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "trusona",
+    "nodes" : {
+      "7F18A16F-A127-43E1-AD3A-0EA6940E9877" : {
+        "displayName" : "Trusona Decision Node",
+        "nodeType" : "TrusonaDecisionNode",
+        "connections" : {
+          "ACCEPTED" : "36AF1940-B547-4E14-8045-3441B3DEFCA8",
+          "REJECTED" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "EXPIRED" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "ERROR" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "36AF1940-B547-4E14-8045-3441B3DEFCA8" : {
+        "displayName" : "Search For User",
+        "nodeType" : "SearchForUserNode",
+        "connections" : {
+          "found" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "notFound" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "ambiguous" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "7F18A16F-A127-43E1-AD3A-0EA6940E9877"
+  }
+}

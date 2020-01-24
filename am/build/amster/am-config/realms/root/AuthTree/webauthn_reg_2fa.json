@@ -1,0 +1,70 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "webauthn_reg_2fa",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "webauthn_reg_2fa",
+    "nodes" : {
+      "0D43AD7F-90B7-4C28-9E20-20AAF6100920" : {
+        "displayName" : "Register",
+        "nodeType" : "WebAuthnRegistrationNode",
+        "connections" : {
+          "unsupported" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "success" : "D843CD5A-A5AA-4460-81FB-6608FF5670A1",
+          "failure" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "D843CD5A-A5AA-4460-81FB-6608FF5670A1" : {
+        "displayName" : "Show Recovery Codes",
+        "nodeType" : "RecoveryCodeDisplayNode",
+        "connections" : {
+          "outcome" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "0F3DCEC1-5C32-444D-A752-A8E4D49FA38C" : {
+        "displayName" : "Validate Creds",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "true" : "62885662-B3F8-40EF-8A1C-8637274EC89A",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "BF991874-0553-42C0-B602-499CBD6C4994" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "3A75E413-B781-4429-A001-526B233EDE8F",
+          "unknown" : "45B0CA25-BAF7-41C7-BE87-DA2B3BDEAF8E"
+        }
+      },
+      "45B0CA25-BAF7-41C7-BE87-DA2B3BDEAF8E" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "0F3DCEC1-5C32-444D-A752-A8E4D49FA38C"
+        }
+      },
+      "3A75E413-B781-4429-A001-526B233EDE8F" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "0F3DCEC1-5C32-444D-A752-A8E4D49FA38C"
+        }
+      },
+      "62885662-B3F8-40EF-8A1C-8637274EC89A" : {
+        "displayName" : "Email OTP",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "0D43AD7F-90B7-4C28-9E20-20AAF6100920",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "BF991874-0553-42C0-B602-499CBD6C4994"
+  }
+}

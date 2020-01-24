@@ -1,0 +1,19 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "SearchForUserNode",
+    "entityId" : "36AF1940-B547-4E14-8045-3441B3DEFCA8",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "36AF1940-B547-4E14-8045-3441B3DEFCA8",
+    "datastoreAttributes" : [ "username", "uid", "mail" ],
+    "sharedStateAttribute" : "username",
+    "_type" : {
+      "_id" : "SearchForUserNode",
+      "name" : "Search For User",
+      "collection" : true
+    }
+  }
+}

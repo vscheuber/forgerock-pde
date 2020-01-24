@@ -1,0 +1,17 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "RecoveryCodeDisplayNode",
+    "entityId" : "4E9333D3-90F8-4F39-956B-2F435D88F943",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "4E9333D3-90F8-4F39-956B-2F435D88F943",
+    "_type" : {
+      "_id" : "RecoveryCodeDisplayNode",
+      "name" : "Recovery Code Display Node",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "webauthn",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "webauthn",
+    "nodes" : {
+      "479DCDB6-0761-443B-9270-319216CDCA86" : {
+        "displayName" : "WebAuthn",
+        "nodeType" : "WebAuthnAuthenticationNode",
+        "connections" : {
+          "success" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "failure" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "recoveryCode" : "3F4E0766-3522-46F1-B897-2C02282C5502",
+          "unsupported" : "237238AA-3876-49B0-B8E7-81BFBBB9DABD",
+          "noDevice" : "FDD019BE-C897-4169-98D4-0045A58AB01C"
+        }
+      },
+      "3F4E0766-3522-46F1-B897-2C02282C5502" : {
+        "displayName" : "Recovery Code",
+        "nodeType" : "RecoveryCodeCollectorDecisionNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "237238AA-3876-49B0-B8E7-81BFBBB9DABD" : {
+        "displayName" : "Message Node",
+        "nodeType" : "MessageNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "9CC9C4F0-F7C3-4116-8CDF-C742F36CCEA1"
+        }
+      },
+      "CB285BD4-D30C-4C0C-A322-FD4A4D0B381E" : {
+        "displayName" : "Validate Creds",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "00BE698A-5AF2-4B66-AA3F-42D607FB6C42" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "479DCDB6-0761-443B-9270-319216CDCA86",
+          "unknown" : "97052833-A101-4EB1-AC55-6057E150C51A"
+        }
+      },
+      "97052833-A101-4EB1-AC55-6057E150C51A" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "479DCDB6-0761-443B-9270-319216CDCA86"
+        }
+      },
+      "FDD019BE-C897-4169-98D4-0045A58AB01C" : {
+        "displayName" : "Register",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "479DCDB6-0761-443B-9270-319216CDCA86",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "9CC9C4F0-F7C3-4116-8CDF-C742F36CCEA1" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "CB285BD4-D30C-4C0C-A322-FD4A4D0B381E"
+        }
+      }
+    },
+    "entryNodeId" : "00BE698A-5AF2-4B66-AA3F-42D607FB6C42"
+  }
+}

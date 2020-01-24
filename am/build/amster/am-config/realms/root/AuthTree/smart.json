@@ -1,0 +1,79 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "smart",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "smart",
+    "nodes" : {
+      "D768A0A7-0B44-47B5-A893-5F28F56BE634" : {
+        "displayName" : "Inside FW?",
+        "nodeType" : "IPAddressDecisionNode",
+        "connections" : {
+          "true" : "18CB4120-AF8E-490F-8CC1-016A1519DAA0",
+          "false" : "52D4AE45-4EDE-4DFB-89FB-00EE4FF69F23"
+        }
+      },
+      "166910BF-EBC3-4447-B50B-6BCC317660C6" : {
+        "displayName" : "Inside FW",
+        "nodeType" : "MessageNode",
+        "connections" : {
+          "true" : "9BF140DC-556D-4624-BD37-76EAEC0C855E",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "52D4AE45-4EDE-4DFB-89FB-00EE4FF69F23" : {
+        "displayName" : "Outside FW",
+        "nodeType" : "MessageNode",
+        "connections" : {
+          "true" : "7900C378-0B1C-44D9-AFA7-9B3DC2205B16",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "18CB4120-AF8E-490F-8CC1-016A1519DAA0" : {
+        "displayName" : "VPN?",
+        "nodeType" : "IPAddressDecisionNode",
+        "connections" : {
+          "false" : "166910BF-EBC3-4447-B50B-6BCC317660C6",
+          "true" : "7ADA2DA9-75CD-4388-A965-3D9809389600"
+        }
+      },
+      "7ADA2DA9-75CD-4388-A965-3D9809389600" : {
+        "displayName" : "On VPN",
+        "nodeType" : "MessageNode",
+        "connections" : {
+          "true" : "2BCF36FA-A9BC-4774-9644-B7D942A0F338",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "9BF140DC-556D-4624-BD37-76EAEC0C855E" : {
+        "displayName" : "Simple Auth",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "2BCF36FA-A9BC-4774-9644-B7D942A0F338" : {
+        "displayName" : "MFA - Trusona",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "7900C378-0B1C-44D9-AFA7-9B3DC2205B16" : {
+        "displayName" : "MFA - Push",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "D768A0A7-0B44-47B5-A893-5F28F56BE634"
+  }
+}

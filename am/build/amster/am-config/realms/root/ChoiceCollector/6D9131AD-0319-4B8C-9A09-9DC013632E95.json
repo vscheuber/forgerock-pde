@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "ChoiceCollector",
+    "entityId" : "6D9131AD-0319-4B8C-9A09-9DC013632E95",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "6D9131AD-0319-4B8C-9A09-9DC013632E95",
+    "defaultChoice" : "OK",
+    "choices" : [ "OK", "Cancel" ],
+    "prompt" : "No Account Exists!",
+    "_type" : {
+      "_id" : "ChoiceCollectorNode",
+      "name" : "Choice Collector",
+      "collection" : true
+    }
+  }
+}

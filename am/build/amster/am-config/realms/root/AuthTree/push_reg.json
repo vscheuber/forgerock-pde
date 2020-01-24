@@ -1,0 +1,80 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "push_reg",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "push_reg",
+    "nodes" : {
+      "0EFB4555-DE60-43CE-B94C-920C7583F4C9" : {
+        "displayName" : "Poll & Wait",
+        "nodeType" : "PollingWaitNode",
+        "connections" : {
+          "DONE" : "3CA14C47-42D8-4D86-8D53-258DF507892A",
+          "SPAM" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "EXITED" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "3CA14C47-42D8-4D86-8D53-258DF507892A" : {
+        "displayName" : "Verify Push",
+        "nodeType" : "PushResultVerifierNode",
+        "connections" : {
+          "WAITING" : "0EFB4555-DE60-43CE-B94C-920C7583F4C9",
+          "EXPIRED" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "FALSE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "TRUE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "3DE261D9-A80B-4927-98FF-35F7CB8B0AE0" : {
+        "displayName" : "Register",
+        "nodeType" : "PushRegNode",
+        "connections" : {
+          "success" : "E0F7E9F1-B6D5-446C-8B37-3F8E3533EB70",
+          "timeout" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "4E3798BC-C779-45C2-A785-868BC2820473" : {
+        "displayName" : "Validate Creds",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "3DE261D9-A80B-4927-98FF-35F7CB8B0AE0"
+        }
+      },
+      "7C95B35D-2FF6-415C-B755-A872F7F5FD78" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "4E3798BC-C779-45C2-A785-868BC2820473"
+        }
+      },
+      "D246A40F-76AD-4969-8CA1-1A48A9E62DF0" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "unknown" : "7C95B35D-2FF6-415C-B755-A872F7F5FD78",
+          "known" : "6DA7CD19-560C-4591-8E3D-80B5E9362009"
+        }
+      },
+      "6DA7CD19-560C-4591-8E3D-80B5E9362009" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "4E3798BC-C779-45C2-A785-868BC2820473"
+        }
+      },
+      "E0F7E9F1-B6D5-446C-8B37-3F8E3533EB70" : {
+        "displayName" : "Send Push",
+        "nodeType" : "PushAuthenticationSenderNode",
+        "connections" : {
+          "SENT" : "0EFB4555-DE60-43CE-B94C-920C7583F4C9",
+          "NOT_REGISTERED" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "D246A40F-76AD-4969-8CA1-1A48A9E62DF0"
+  }
+}

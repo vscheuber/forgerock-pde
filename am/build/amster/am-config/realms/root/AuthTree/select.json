@@ -1,0 +1,58 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "select",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "select",
+    "nodes" : {
+      "075BE013-D445-4DA5-880A-E28A3AAB4A05" : {
+        "displayName" : "Select MFA Method",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "Abort" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "Push" : "86A6A6AD-0CA6-4C6F-A3E5-11E3F3E10764",
+          "Trusona" : "F3C06785-7156-4984-BC0F-F72731B36CEA",
+          "Fido" : "DE71FF8C-C0C9-4C03-9EB6-E8A19DCD09EE",
+          "Email" : "71090AAE-32F7-4775-9A14-AEC2FDDB2A9C"
+        }
+      },
+      "86A6A6AD-0CA6-4C6F-A3E5-11E3F3E10764" : {
+        "displayName" : "Push",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "F3C06785-7156-4984-BC0F-F72731B36CEA" : {
+        "displayName" : "Trusona",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "71090AAE-32F7-4775-9A14-AEC2FDDB2A9C" : {
+        "displayName" : "Email",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "DE71FF8C-C0C9-4C03-9EB6-E8A19DCD09EE" : {
+        "displayName" : "WebAuthN",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      }
+    },
+    "entryNodeId" : "075BE013-D445-4DA5-880A-E28A3AAB4A05"
+  }
+}

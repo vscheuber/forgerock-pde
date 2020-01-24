@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "RecoveryCodeCollectorDecision",
+    "entityId" : "3F4E0766-3522-46F1-B897-2C02282C5502",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "3F4E0766-3522-46F1-B897-2C02282C5502",
+    "recoveryCodeType" : "WEB_AUTHN",
+    "_type" : {
+      "_id" : "RecoveryCodeCollectorDecisionNode",
+      "name" : "Recovery Code Collector Decision",
+      "collection" : true
+    }
+  }
+}

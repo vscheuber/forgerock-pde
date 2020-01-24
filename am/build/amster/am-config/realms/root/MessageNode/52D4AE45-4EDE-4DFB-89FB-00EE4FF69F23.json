@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "MessageNode",
+    "entityId" : "52D4AE45-4EDE-4DFB-89FB-00EE4FF69F23",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "52D4AE45-4EDE-4DFB-89FB-00EE4FF69F23",
+    "messageYes" : {
+      "en" : "Continue"
+    },
+    "messageNo" : {
+      "en" : "Abort"
+    },
+    "message" : {
+      "en" : "You are outsisde the FW!"
+    },
+    "_type" : {
+      "_id" : "MessageNode",
+      "name" : "Message Node",
+      "collection" : true
+    }
+  }
+}

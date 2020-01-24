@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "MessageNode",
+    "entityId" : "7ADA2DA9-75CD-4388-A965-3D9809389600",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "7ADA2DA9-75CD-4388-A965-3D9809389600",
+    "messageYes" : {
+      "en" : "Continue"
+    },
+    "messageNo" : {
+      "en" : "Abort"
+    },
+    "message" : {
+      "en" : "You are VPN-ed in!"
+    },
+    "_type" : {
+      "_id" : "MessageNode",
+      "name" : "Message Node",
+      "collection" : true
+    }
+  }
+}

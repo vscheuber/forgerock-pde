@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "InnerTreeEvaluator",
+    "entityId" : "BE5E8387-6989-4121-91BB-6988FAE0E9D1",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "BE5E8387-6989-4121-91BB-6988FAE0E9D1",
+    "tree" : "select",
+    "_type" : {
+      "_id" : "InnerTreeEvaluatorNode",
+      "name" : "Inner Tree Evaluator",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "push",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "push",
+    "nodes" : {
+      "A3CD1796-6007-46CD-93AB-139047E35584" : {
+        "displayName" : "Polling",
+        "nodeType" : "PollingWaitNode",
+        "connections" : {
+          "DONE" : "2999AFA1-633E-4B7E-AE02-CA0F8E2A5646",
+          "SPAM" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "EXITED" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "2999AFA1-633E-4B7E-AE02-CA0F8E2A5646" : {
+        "displayName" : "Verify Push",
+        "nodeType" : "PushResultVerifierNode",
+        "connections" : {
+          "WAITING" : "A3CD1796-6007-46CD-93AB-139047E35584",
+          "EXPIRED" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "FALSE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "TRUE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "1A7BE6F1-4010-442B-B108-19940374ECCB" : {
+        "displayName" : "Username?",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "known" : "14BEDB0A-6D7C-4630-9488-28983F855442",
+          "unknown" : "5967A1E4-1E1B-4DC4-A730-8B1AD698007F"
+        }
+      },
+      "5967A1E4-1E1B-4DC4-A730-8B1AD698007F" : {
+        "displayName" : "Login Form",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "14BEDB0A-6D7C-4630-9488-28983F855442"
+        }
+      },
+      "14BEDB0A-6D7C-4630-9488-28983F855442" : {
+        "displayName" : "Send Push",
+        "nodeType" : "PushAuthenticationSenderNode",
+        "connections" : {
+          "NOT_REGISTERED" : "01535891-E434-4EFD-ABA5-B53B9D788EF8",
+          "SENT" : "A3CD1796-6007-46CD-93AB-139047E35584"
+        }
+      },
+      "01535891-E434-4EFD-ABA5-B53B9D788EF8" : {
+        "displayName" : "Register",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "14BEDB0A-6D7C-4630-9488-28983F855442",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "1A7BE6F1-4010-442B-B108-19940374ECCB"
+  }
+}

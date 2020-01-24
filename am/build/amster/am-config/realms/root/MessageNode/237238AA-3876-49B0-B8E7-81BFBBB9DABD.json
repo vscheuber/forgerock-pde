@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "MessageNode",
+    "entityId" : "237238AA-3876-49B0-B8E7-81BFBBB9DABD",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "237238AA-3876-49B0-B8E7-81BFBBB9DABD",
+    "messageYes" : {
+      "en" : "Yes"
+    },
+    "messageNo" : {
+      "en" : "No"
+    },
+    "message" : {
+      "en" : "Your browser doesn't support WebAuthn, would you like to continue and authenticate using other means?"
+    },
+    "_type" : {
+      "_id" : "MessageNode",
+      "name" : "Message Node",
+      "collection" : true
+    }
+  }
+}

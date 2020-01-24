@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "ChoiceCollector",
+    "entityId" : "D9814467-E1AB-46BB-AB46-2C062C48E8C2",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "D9814467-E1AB-46BB-AB46-2C062C48E8C2",
+    "defaultChoice" : "Google",
+    "choices" : [ "Email", "Google", "Facebook", "None" ],
+    "prompt" : "Secure Your Account",
+    "_type" : {
+      "_id" : "ChoiceCollectorNode",
+      "name" : "Choice Collector",
+      "collection" : true
+    }
+  }
+}

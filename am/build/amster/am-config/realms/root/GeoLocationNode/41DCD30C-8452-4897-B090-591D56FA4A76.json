@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "GeoLocationNode",
+    "entityId" : "41DCD30C-8452-4897-B090-591D56FA4A76",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "41DCD30C-8452-4897-B090-591D56FA4A76",
+    "distanceUnit" : "MILE",
+    "speedLimitModerateRisk" : "600",
+    "ipDataStoreField" : "carLicense",
+    "countryWhiteList" : [ ],
+    "proxyAttribute" : "x-forwarded-for",
+    "nodeMode" : "CHECK",
+    "speedLimitNoRisk" : "15",
+    "proxyMode" : "PROXY",
+    "distanceLowRisk" : "1000",
+    "speedLimitLowRisk" : "70",
+    "distanceRisk" : true,
+    "distanceNoRisk" : "500",
+    "provider" : "IPAPI",
+    "distanceModerateRisk" : "6000",
+    "countryListType" : "NONE",
+    "speedLimitRisk" : false,
+    "countryBlackList" : [ "GB", "US" ],
+    "_type" : {
+      "_id" : "GeoLocationNode",
+      "name" : "GeoLocation Node",
+      "collection" : true
+    }
+  }
+}

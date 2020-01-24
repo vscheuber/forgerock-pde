@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "WebAuthnAuthenticationNode",
+    "entityId" : "479DCDB6-0761-443B-9270-319216CDCA86",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "479DCDB6-0761-443B-9270-319216CDCA86",
+    "relyingPartyDomain" : "ForgeRock",
+    "isRecoveryCodeAllowed" : true,
+    "userVerificationRequirement" : "PREFERRED",
+    "timeout" : 60,
+    "_type" : {
+      "_id" : "WebAuthnAuthenticationNode",
+      "name" : "WebAuthn Authentication Node",
+      "collection" : true
+    }
+  }
+}

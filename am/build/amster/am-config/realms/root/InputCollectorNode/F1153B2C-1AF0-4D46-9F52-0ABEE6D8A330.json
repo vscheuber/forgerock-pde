@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "InputCollectorNode",
+    "entityId" : "F1153B2C-1AF0-4D46-9F52-0ABEE6D8A330",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "F1153B2C-1AF0-4D46-9F52-0ABEE6D8A330",
+    "variable" : "mail",
+    "useTransient" : false,
+    "isPassword" : false,
+    "prompt" : "Email",
+    "_type" : {
+      "_id" : "InputCollectorNode",
+      "name" : "Input Collector Node",
+      "collection" : true
+    }
+  }
+}

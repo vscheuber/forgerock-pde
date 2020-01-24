@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "ChoiceCollector",
+    "entityId" : "075BE013-D445-4DA5-880A-E28A3AAB4A05",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "075BE013-D445-4DA5-880A-E28A3AAB4A05",
+    "defaultChoice" : "Push",
+    "choices" : [ "Abort", "Push", "Trusona", "Fido", "Email" ],
+    "prompt" : "Select your 2nd factor to login",
+    "_type" : {
+      "_id" : "ChoiceCollectorNode",
+      "name" : "Choice Collector",
+      "collection" : true
+    }
+  }
+}

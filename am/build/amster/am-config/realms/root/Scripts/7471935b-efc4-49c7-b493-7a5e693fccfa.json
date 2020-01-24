@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "Scripts",
+    "entityId" : "7471935b-efc4-49c7-b493-7a5e693fccfa",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "7471935b-efc4-49c7-b493-7a5e693fccfa",
+    "name" : "MovePasswordToSharedState",
+    "description" : "null",
+    "script" : "LyoKICAtIERhdGEgbWFkZSBhdmFpbGFibGUgYnkgbm9kZXMgdGhhdCBoYXZlIGFscmVhZHkgZXhlY3V0ZWQgYXJlIGF2YWlsYWJsZSBpbiB0aGUgc2hhcmVkU3RhdGUgdmFyaWFibGUuCiAgLSBUaGUgc2NyaXB0IHNob3VsZCBzZXQgb3V0Y29tZSB0byBlaXRoZXIgInRydWUiIG9yICJmYWxzZSIuCiAqLwpTdHJpbmcgcHdkID0gdHJhbnNpZW50U3RhdGUuZ2V0KCJwYXNzd29yZCIpOwppZiAocHdkKSB7CiAgc2hhcmVkU3RhdGUucHV0KCJwYXNzd29yZCIsIHB3ZCk7CiAgb3V0Y29tZSA9ICJ0cnVlIjsKfSBlbHNlIHsKICBvdXRjb21lID0gImZhbHNlIjsKfQ==",
+    "default" : false,
+    "language" : "GROOVY",
+    "context" : "AUTHENTICATION_TREE_DECISION_NODE",
+    "createdBy" : "null",
+    "creationDate" : 0,
+    "lastModifiedBy" : "null",
+    "lastModifiedDate" : 0
+  }
+}

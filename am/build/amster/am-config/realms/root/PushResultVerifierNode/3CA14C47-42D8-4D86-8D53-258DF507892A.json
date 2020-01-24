@@ -1,0 +1,17 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PushResultVerifierNode",
+    "entityId" : "3CA14C47-42D8-4D86-8D53-258DF507892A",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "3CA14C47-42D8-4D86-8D53-258DF507892A",
+    "_type" : {
+      "_id" : "PushResultVerifierNode",
+      "name" : "Push Result Verifier Node",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PageNode",
+    "entityId" : "0E0E75F4-8978-4189-B24C-075FB93F4E87",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "0E0E75F4-8978-4189-B24C-075FB93F4E87",
+    "nodes" : [ {
+      "_id" : "B62AA79B-187F-44F0-9717-870EC03FC8BE",
+      "nodeType" : "InputCollectorNode",
+      "displayName" : "First Name"
+    }, {
+      "_id" : "B13FAFC5-3689-404C-8133-31644D5E3A49",
+      "nodeType" : "InputCollectorNode",
+      "displayName" : "Last Name"
+    }, {
+      "_id" : "F1153B2C-1AF0-4D46-9F52-0ABEE6D8A330",
+      "nodeType" : "InputCollectorNode",
+      "displayName" : "Email"
+    }, {
+      "_id" : "C475E0FC-D1C0-47FC-9515-B9389C63DFF3",
+      "nodeType" : "InputCollectorNode",
+      "displayName" : "Mobile Phone"
+    } ],
+    "_type" : {
+      "_id" : "PageNode",
+      "name" : "Page Node",
+      "collection" : true
+    }
+  }
+}

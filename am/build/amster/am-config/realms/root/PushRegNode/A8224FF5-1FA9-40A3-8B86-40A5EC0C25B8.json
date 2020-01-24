@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PushRegNode",
+    "entityId" : "A8224FF5-1FA9-40A3-8B86-40A5EC0C25B8",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "A8224FF5-1FA9-40A3-8B86-40A5EC0C25B8",
+    "retries" : 15,
+    "color" : "519387",
+    "timeout" : 4000,
+    "issuer" : "ForgeRock",
+    "_type" : {
+      "_id" : "PushRegNode",
+      "name" : "Push Reg Node",
+      "collection" : true
+    }
+  }
+}

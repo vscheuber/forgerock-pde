@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PushSender",
+    "entityId" : "E0F7E9F1-B6D5-446C-8B37-3F8E3533EB70",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "E0F7E9F1-B6D5-446C-8B37-3F8E3533EB70",
+    "userMessage" : { },
+    "mandatory" : true,
+    "messageTimeout" : 120000,
+    "_type" : {
+      "_id" : "PushAuthenticationSenderNode",
+      "name" : "Push Sender",
+      "collection" : true
+    }
+  }
+}

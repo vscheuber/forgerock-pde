@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "TrusonaDecisionNode",
+    "entityId" : "7F18A16F-A127-43E1-AD3A-0EA6940E9877",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "7F18A16F-A127-43E1-AD3A-0EA6940E9877",
+    "apiToken" : "eyJraWQiOiI1NmE1YmRkMC0zYjZlLTQxOWQtYWEyYy1hMDQwNmExYWRlNDciLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkYjk5OTBkMC0zOTYwLTQxMDAtYTI5OC1iNGFiMWMxOWM3NWQiLCJuYmYiOjE1NTg1MzQ1MDMsImF0aCI6IlJPTEVfVFJVU1RFRF9SUCIsImlzcyI6InRzOjZiNGQwNDIwLTAwNWItNDgxMS04YTBiLTJhZDRiMzI5ZTJhNiIsImV4cCI6MTg3NDEwNDAyMywiaWF0IjoxNTU4NTM0NTAzLCJqdGkiOiI0MTdkN2MzYi1mYmM2LTRlMTctODAyNi1mMTY1NWU5MTUzNjkifQ.he7uGxUPugAWDnmeCH1Wfvn6ctb1J-eXChzEkFcq4tls8C8u5Oo9eaeMboU7prsci2mF4az6Clmm8mgAokSBTuoVn5aqY0xSpLjcp0xYUt5Tj9NJrpAhGik8UncbMMRU4QTkeWYYy6DZsVwV-wQN_O2nNW2dOQYd5rwCfgL032f8kyYofTevpa5KhctYhpMQLaSq1djjxf9DyHdRPYZZp2NFEznNic2lUSTHP_JscXQZrncV7GEOq60C3uoET4MrdBNJx3nqiQp-1tdal5udM30HFjgm8k3xMvQsgX5Ztpmfcs-ot6OkfZZvM2mav1i5h3IjHvAz6sD0YHWWMq5uTA",
+    "authenticationLevel" : "ESSENTIAL",
+    "resource" : "ForgeRock",
+    "deeplinkUrl" : "http://www.forgerock.com",
+    "action" : "login",
+    "userAliasList" : [ "mail" ],
+    "_type" : {
+      "_id" : "TrusonaDecisionNode",
+      "name" : "Trusona Decision Node",
+      "collection" : true
+    }
+  }
+}

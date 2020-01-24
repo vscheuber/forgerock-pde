@@ -1,0 +1,64 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "register",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "register",
+    "nodes" : {
+      "0E0E75F4-8978-4189-B24C-075FB93F4E87" : {
+        "displayName" : "Sign Up Now",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "outcome" : "75BAF71F-8635-4331-B47A-E57B7234B565"
+        }
+      },
+      "D9814467-E1AB-46BB-AB46-2C062C48E8C2" : {
+        "displayName" : "Secure Account",
+        "nodeType" : "ChoiceCollectorNode",
+        "connections" : {
+          "Email" : "8031630E-A81E-434A-9F71-A1CA979E69B5",
+          "Google" : "4B497BF0-43F7-4254-9A8A-84F6C03DFF64",
+          "Facebook" : "1E9338E3-7205-4D54-BE9B-442CA523E1CC",
+          "None" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "75BAF71F-8635-4331-B47A-E57B7234B565" : {
+        "displayName" : "ProvisionIDM",
+        "nodeType" : "ScriptedDecisionNode",
+        "connections" : {
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "D9814467-E1AB-46BB-AB46-2C062C48E8C2"
+        }
+      },
+      "8031630E-A81E-434A-9F71-A1CA979E69B5" : {
+        "displayName" : "Email Verify",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "4B497BF0-43F7-4254-9A8A-84F6C03DFF64" : {
+        "displayName" : "Google Verify",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "1E9338E3-7205-4D54-BE9B-442CA523E1CC" : {
+        "displayName" : "Facebook Verify",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "0E0E75F4-8978-4189-B24C-075FB93F4E87"
+  }
+}

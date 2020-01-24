@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "InputCollectorNode",
+    "entityId" : "B13FAFC5-3689-404C-8133-31644D5E3A49",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "B13FAFC5-3689-404C-8133-31644D5E3A49",
+    "variable" : "sn",
+    "useTransient" : false,
+    "isPassword" : false,
+    "prompt" : "Last Name",
+    "_type" : {
+      "_id" : "InputCollectorNode",
+      "name" : "Input Collector Node",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "HaveIBeenPwnedPasswordNode",
+    "entityId" : "22F2921B-5DDD-4720-8E44-4F92D9C53353",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "22F2921B-5DDD-4720-8E44-4F92D9C53353",
+    "password" : "password",
+    "threshold" : 0,
+    "_type" : {
+      "_id" : "HaveIBeenPwnedPasswordNode",
+      "name" : "Have I Been Pwned Password",
+      "collection" : true
+    }
+  }
+}

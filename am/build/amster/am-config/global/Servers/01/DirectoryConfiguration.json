@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "DirectoryConfiguration",
+    "entityId" : "http://am.mytestrun.com:8080",
+    "pathParams" : {
+      "serverName" : "http://am.mytestrun.com:8080"
+    }
+  },
+  "data" : {
+    "_id" : "01/properties/directoryConfiguration",
+    "directoryConfiguration" : {
+      "minConnectionPool" : 1,
+      "maxConnectionPool" : 10,
+      "bindDn" : "cn=Directory Manager",
+      "bindPassword" : null
+    },
+    "directoryServers" : [ {
+      "hostName" : "localhost",
+      "serverName" : "Server1",
+      "connectionType" : "SIMPLE",
+      "portNumber" : "50389"
+    } ]
+  }
+}

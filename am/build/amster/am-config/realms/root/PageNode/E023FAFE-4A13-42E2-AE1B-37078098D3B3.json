@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "PageNode",
+    "entityId" : "E023FAFE-4A13-42E2-AE1B-37078098D3B3",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "E023FAFE-4A13-42E2-AE1B-37078098D3B3",
+    "nodes" : [ {
+      "_id" : "748A8E0E-B67D-4BA1-BE6F-B8612B98396E",
+      "nodeType" : "PasswordCollectorNode",
+      "displayName" : "Password"
+    } ],
+    "_type" : {
+      "_id" : "PageNode",
+      "name" : "Page Node",
+      "collection" : true
+    }
+  }
+}

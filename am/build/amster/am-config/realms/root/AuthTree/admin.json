@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "admin",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "admin",
+    "nodes" : {
+      "0eb514dd-0961-4ca6-a89a-4b4afc33f52d" : {
+        "displayName" : "Simple",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "0eb514dd-0961-4ca6-a89a-4b4afc33f52d"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "MessageNode",
+    "entityId" : "7D39B671-6EC3-462F-9DDC-CE443A9E3766",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "7D39B671-6EC3-462F-9DDC-CE443A9E3766",
+    "messageYes" : {
+      "en" : "OK"
+    },
+    "messageNo" : {
+      "en" : "Abort"
+    },
+    "message" : {
+      "en" : "Access Denied!"
+    },
+    "_type" : {
+      "_id" : "MessageNode",
+      "name" : "Message Node",
+      "collection" : true
+    }
+  }
+}

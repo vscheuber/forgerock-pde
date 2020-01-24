@@ -1,0 +1,30 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "AuthTree",
+    "entityId" : "facebook",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "facebook",
+    "nodes" : {
+      "F86C8FD1-FD9F-4EE2-BDC5-57B72FB49643" : {
+        "displayName" : "Social Facebook",
+        "nodeType" : "SocialFacebookNode",
+        "connections" : {
+          "NO_ACCOUNT" : "89C95940-7AAD-4222-BCA3-BA10A458CCDA",
+          "ACCOUNT_EXISTS" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "89C95940-7AAD-4222-BCA3-BA10A458CCDA" : {
+        "displayName" : "Anonymous User Mapping",
+        "nodeType" : "AnonymousUserNode",
+        "connections" : {
+          "outcome" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      }
+    },
+    "entryNodeId" : "F86C8FD1-FD9F-4EE2-BDC5-57B72FB49643"
+  }
+}

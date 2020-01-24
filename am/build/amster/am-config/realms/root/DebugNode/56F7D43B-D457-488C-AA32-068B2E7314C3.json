@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.5.2.2",
+    "entityType" : "DebugNode",
+    "entityId" : "56F7D43B-D457-488C-AA32-068B2E7314C3",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "56F7D43B-D457-488C-AA32-068B2E7314C3",
+    "transientState" : true,
+    "_type" : {
+      "_id" : "DebugNode",
+      "name" : "Debug Node",
+      "collection" : true
+    }
+  }
+}
