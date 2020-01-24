@@ -16,21 +16,7 @@
                 "properties" : {
                     "queryOnResource" : "internal/user",
                     "username" : "anonymous",
-                    "password" : {
-                        "$crypto" : {
-                            "type" : "x-simple-encryption",
-                            "value" : {
-                                "cipher" : "AES/CBC/PKCS5Padding",
-                                "stableId" : "openidm-sym-default",
-                                "salt" : "MnXRNdc7cex9xDuoIhFHJg==",
-                                "data" : "lb+rkZV/0+9DIoRSnbbNCw==",
-                                "keySize" : 16,
-                                "purpose" : "idm.config.encryption",
-                                "iv" : "5JKlcF4lHgOa+mFjCK3/Zg==",
-                                "mac" : "beD4UXJlO6OKfpswt6jY9A=="
-                            }
-                        }
-                    },
+                    "password" : "anonymous",
                     "defaultUserRoles" : [
                         "internal/role/openidm-reg"
                     ]
