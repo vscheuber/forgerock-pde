@@ -1,15 +1,2 @@
-# ForgeRock Product Binaries
-AM-eval-*.war
-am.war
-openam.war
-Amster-*.zip
-amster.zip
-IDM-eval-*.zip
-idm.zip
-openidm.zip
-
 # Temp Files
 temp/*
-
-# Snapshots
-am/build/amster/am-snapshot
