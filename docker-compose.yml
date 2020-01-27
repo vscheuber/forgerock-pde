@@ -16,7 +16,7 @@ services:
       - AM_HOST=${AM_HOST}
       - AM_PASSWORD=${AM_PASSWORD}
     ports:
-      # - "8080:8080"
+      - "8090:8080"
       - "443:8443"
       - "50389:50389"
     hostname: am
@@ -37,21 +37,19 @@ services:
       args:
         - IDM_HOST=${IDM_HOST}
         - IDM_PASSWORD=${IDM_PASSWORD}
-        - PROJECT_HOME={PROJECT_HOME}
     environment: 
       - IDM_HOST=${IDM_HOST}
       - IDM_PASSWORD=${IDM_PASSWORD}
-      - PROJECT_HOME=${PROJECT_HOME}
     ports:
       - "8080:8080"
-      - "50390:50389"
+      # - "50390:50389"
     hostname: idm
     domainname: mytestrun.com
     networks:
       - forgenet
     volumes:
-      - "./idm/build/idm-config:/opt/idm-config"
-      # - "./am/volumes/am-config:/root/am"
+      - "./idm/run/config/idm:/opt/forgerock/idm/project/pde"
+      - "./idm/run/snapshot:/opt/forgerock/idm/snapshot"
 
 networks:
   forgenet:

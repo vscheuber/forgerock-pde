@@ -47,7 +47,7 @@ There are many ways to interact with the environment after it has started. To se
 
 The AM container has been set up with the following properties:
 
-* AM URL: `https://am.mytestrun.com`
+* AM URL: `http://am.mytestrun.com:8090`
 * AM admin username: `amadmin`
 * AM admin password: `F0rgeR0ck2020`
 
@@ -55,7 +55,7 @@ The AM container has been set up with the following properties:
 
 The IDM container has been set up with the following properties:
 
-* IDM URL: `https://idm.mytestrun.com/admin`
+* IDM URL: `http://idm.mytestrun.com:8080/admin`
 * IDM admin username: `openidm-admin`
 * IDM admin password: `F0rgeR0ck2020`
 
