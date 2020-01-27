@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2016-2020 ForgeRock AS.
+#
+
 FROM tomcat:8.5-alpine
 ARG AM_HOST=${AM_HOST}
 ARG AM_PASSWORD=${AM_PASSWORD}
